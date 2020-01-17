@@ -3,6 +3,10 @@
 #
 # setup variables to make the commands less spammy.
 
+# Specify which subscription (if you have multiple Azure subscriptions) to use for this server.
+# this is potentially very important if you have multiple Azure subscriptions!
+# If you have only one subscription, you should leave the NULL value as shown below.
+SUBNAME="NULL"
 # yor resource group name.
 RESGROUP="rglab"
 # pick an Azure Region
@@ -24,6 +28,14 @@ IMG="UbuntuLTS"
 ### IMPORTANT: If you have NOT already logged into your Azure account, you need this.
 # otherwise, if you ARe logged in, you can comment this out.
 az login
+
+# If the default SUBNAME variable hasn't been changed, skip this part.
+if [ "$SUBNAME" = "NULL" ]
+	then
+		exit;
+	else
+		az account set -s $SUBNAME
+	fi
 
 # Create a Resource Group, and specify a Region
 az group create --name $RESGROUP  --location $REGION
