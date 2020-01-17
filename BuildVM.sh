@@ -17,6 +17,8 @@ NSG="MyNSG"
 AVSET="MyAvailabilitySet"
 # pick a server hostname 
 SERVERNAME="mytestlab001"
+# pick the size of the server, more info can be found at https://azure.mirosoft.com/pricing/details/irtual-machines
+SERVERSIZE="Standard_B2s"
 # pick a username to login to the new server with
 VMUSER="azureuser"
 
@@ -67,7 +69,7 @@ az network nic create --resource-group $RESGROUP --name myNic --vnet-name myVnet
 az vm availability-set create --resource-group $RESGROUP --name $AVSET
 
 # Create the VM
-az vm create --resource-group $RESGROUP --name myLabVM --location $REGION --availability-set $AVSET --nics myNic --image $IMG --admin-username $VMUSER --generate-ssh-keys >temp.txt
+az vm create --resource-group $RESGROUP --name myLabVM --location $REGION --size $SERVERSIZE --availability-set $AVSET --nics myNic --image $IMG --admin-username $VMUSER --generate-ssh-keys >temp.txt
 SERVER=`cat temp.txt |grep -e fqdns |awk '{print $2}' |cut -d\" -f2`
 
 echo "Server: $SERVER"
