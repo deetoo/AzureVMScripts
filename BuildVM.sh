@@ -18,6 +18,7 @@ AVSET="MyAvailabilitySet"
 # pick a server hostname 
 SERVERNAME="mytestlab001"
 # pick the size of the server, more info can be found at https://azure.mirosoft.com/pricing/details/irtual-machines
+# default Standard_B2s is 2 cores, 4GB RAM
 SERVERSIZE="Standard_B2s"
 # pick a username to login to the new server with
 VMUSER="azureuser"
