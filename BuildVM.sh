@@ -32,7 +32,7 @@ az login
 # If the default SUBNAME variable hasn't been changed, skip this part.
 if [ "$SUBNAME" = "NULL" ]
 	then
-		exit;
+		echo "Using your default subscription."	
 	else
 		az account set -s $SUBNAME
 	fi
