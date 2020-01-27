@@ -14,6 +14,8 @@ be easy enough for Beginners to read. Simple changes to declared variables will 
 + Creating inbound port rules within the NSG
 + Defining Availability Set Name
 
+If you have multiple subscriptions, the script supports declaring which subscription to use. Otherwise it will default to using the default subscription if only one exists.
+
 This script defaults to creating a Standard_B2s server size (2 cores, 4GB of RAM)
 
 This script configures the Azure VM to authenticate via SSH keys, you can modify this for username/password if you'd like.
