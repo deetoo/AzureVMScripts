@@ -15,6 +15,9 @@ be easy enough for Beginners to read. Simple changes to declared variables will 
 + Defining Availability Set Name
 
 This script defaults to creating a Standard_B2s server size (2 cores, 4GB of RAM)
+
+This script configures the Azure VM to authenticate via SSH keys, you can modify this for username/password if you'd like.
+
 This is a basic script, and should be useful as a starting point for your further customization.
 
-If you have any questions or would like to request additional features for this script, feel free to poing me!
+If you have any questions or would like to request additional features for this script, feel free to ping me!
