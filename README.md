@@ -2,6 +2,7 @@
 Collection of scripts to automate the creation and customization of MS Azure Virtual Machines
 
 # BuildVM.sh
+![bash](https://camo.githubusercontent.com/af0bfb10fe1fe6de2a4bb8ef91abc87a7ca1ca81/68747470733a2f2f6261646765732e66726170736f66742e636f6d2f626173682f76312f626173682e706e673f763d313033)
 This Linux shell script (bash) will automate the process of deploying a VM in Azure. It's decently commented, and should
 be easy enough for Beginners to read. Simple changes to declared variables will allow you to customize thigs such as:
 + Resource Group
