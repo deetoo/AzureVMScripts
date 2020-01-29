@@ -5,8 +5,9 @@
 
 # Specify which subscription (if you have multiple Azure subscriptions) to use for this server.
 # this is potentially very important if you have multiple Azure subscriptions!
-# If you have only one subscription, you should leave the NULL value as shown below.
+# ***If you have only one subscription, you should leave the NULL value as shown below.***
 SUBNAME="NULL"
+
 # yor resource group name.
 RESGROUP="rglab"
 # pick an Azure Region
@@ -18,7 +19,7 @@ AVSET="MyAvailabilitySet"
 # pick a server hostname 
 SERVERNAME="mytestlab001"
 # pick the size of the server, more info can be found at https://azure.mirosoft.com/pricing/details/irtual-machines
-# default Standard_B2s is 2 cores, 4GB RAM
+# default Standard_B2s is 2 cores, 4GB RAM (For a iUbuntu or CentOS box with these specs, the monthly cost would be $37.13)
 SERVERSIZE="Standard_B2s"
 # pick a username to login to the new server with
 VMUSER="azureuser"
@@ -32,7 +33,7 @@ IMG="UbuntuLTS"
 # otherwise, if you ARe logged in, you can comment this out.
 az login
 
-# If the default SUBNAME variable hasn't been changed, skip this part.
+# If the default SUBNAME variable hasn't been changed, assume no subscription has been declared and skip this part.
 if [ "$SUBNAME" = "NULL" ]
 	then
 		echo "Using your default subscription."	
